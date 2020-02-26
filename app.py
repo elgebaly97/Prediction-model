@@ -39,7 +39,9 @@ def predict():
       grade = 'Very Good'
       
 
-    return render_template('index.html', prediction_text='Predicted Grade is {}'.format(grade))
+    #return render_template('index.html', prediction_text='Predicted Grade is {}'.format(grade))
+    grade_json = jsonify({"grade" : grade})
+    return grade_json
 
 
 if __name__ == "__main__":
